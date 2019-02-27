@@ -34,7 +34,7 @@ public class ExchangeValue {
     @Column(name="currency_to")
     private String to ;
 
-
+    @Column(name="conversion_multiple")
     private BigDecimal conversionMultiple ;
 
     private int port ;
@@ -53,7 +53,7 @@ public class ExchangeValue {
         super() ;
         this.id = id ;
         this.from = from ;
-        this .to = to ;
+        this.to = to ;
         this.conversionMultiple = conversionMultiple ;
 
 
@@ -75,6 +75,9 @@ public class ExchangeValue {
 
     public BigDecimal getConversionMultiple() {
         return conversionMultiple;
+    }
+    public void setConversionMultiple(BigDecimal conversionMultiple) {
+        this.conversionMultiple = conversionMultiple;
     }
 
     public int getPort() {
